@@ -41,3 +41,10 @@ export function ActivableMixin<Base extends Constractor>(base: Base){
         }
     } 
 }
+
+class MyClass extends ActivableMixin(DisposableMixin(class {})){
+    constructor(){
+        super();
+        
+    }
+}
